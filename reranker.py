@@ -36,4 +36,4 @@ reranked = reranker.rerank(query, initial_docs, top_k=3)
 print("\nAfter Re-ranking (top 3):")
 for i, (doc, score) in enumerate(reranked, 1):
     print(f"  [{i}] Score: {score:.4f}")
-    print(f"      {doc.page_content[:100]}..."
+    print(f"      {doc.page_content[:100]}...")
