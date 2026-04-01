@@ -36,7 +36,7 @@ qa_chain = RetrievalQA.from_chain_type(
     chain_type_kwargs={"prompt": PROMPT}
 )
 
-result = qa_chain.invoke({"query": "What are LLMs?"})    
+result = qa_chain.invoke({"query": "What is a transformer?"})    
 for i, doc in enumerate(result, 1):
     print(f"\n[{i}] {doc}...")
 
