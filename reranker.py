@@ -1,4 +1,5 @@
 from sentence_transformers import CrossEncoder
+from retreiver import vectorstore
 
 class CrossEncoderReranker:
     def __init__(self, model_name='cross-encoder/ms-marco-MiniLM-L-6-v2'):
@@ -22,6 +23,7 @@ class CrossEncoderReranker:
         )
         
         return ranked[:top_k]
+    
 # Initialize re-ranker
 reranker = CrossEncoderReranker()
 # Compare before/after re-ranking
